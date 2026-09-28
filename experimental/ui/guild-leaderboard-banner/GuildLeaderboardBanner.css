@@ -1,0 +1,291 @@
+.guild-banner-container {
+  background: linear-gradient(135deg, rgba(20, 24, 40, 0.95), rgba(12, 14, 25, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.guild-banner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+}
+
+.guild-banner-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guild-banner-icon {
+  font-size: 1.5rem;
+}
+
+.guild-banner-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guild-banner-season {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Empty state */
+.guild-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+}
+
+.guild-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.guild-empty-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+.guild-empty-desc {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  max-width: 360px;
+}
+
+/* Podium Grid */
+.guild-podium-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.guild-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guild-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 1st Place - Gold */
+.guild-card.rank-1 {
+  background: linear-gradient(180deg, rgba(234, 179, 8, 0.12), rgba(20, 24, 40, 0.7));
+  border: 1px solid rgba(234, 179, 8, 0.6);
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.25);
+  order: 1;
+}
+
+/* 2nd Place - Silver */
+.guild-card.rank-2 {
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.1), rgba(20, 24, 40, 0.7));
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 0 15px rgba(148, 163, 184, 0.2);
+  order: 2;
+}
+
+/* 3rd Place - Bronze */
+.guild-card.rank-3 {
+  background: linear-gradient(180deg, rgba(217, 119, 6, 0.1), rgba(20, 24, 40, 0.7));
+  border: 1px solid rgba(217, 119, 6, 0.5);
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.2);
+  order: 3;
+}
+
+.guild-rank-badge {
+  position: absolute;
+  top: -10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.rank-1 .guild-rank-badge {
+  background: linear-gradient(90deg, #f59e0b, #eab308);
+  color: #111827;
+}
+
+.rank-2 .guild-rank-badge {
+  background: linear-gradient(90deg, #cbd5e1, #94a3b8);
+  color: #0f172a;
+}
+
+.rank-3 .guild-rank-badge {
+  background: linear-gradient(90deg, #f97316, #b45309);
+  color: #ffffff;
+}
+
+.guild-crest-wrapper {
+  margin: 12px 0 10px;
+}
+
+.guild-crest-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.guild-crest-fallback {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #374151, #1f2937);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.rank-1 .guild-crest-img,
+.rank-1 .guild-crest-fallback {
+  border-color: #f59e0b;
+}
+
+.rank-2 .guild-crest-img,
+.rank-2 .guild-crest-fallback {
+  border-color: #94a3b8;
+}
+
+.rank-3 .guild-crest-img,
+.rank-3 .guild-crest-fallback {
+  border-color: #d97706;
+}
+
+.guild-name-group {
+  margin-bottom: 12px;
+}
+
+.guild-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.guild-tag {
+  color: #818cf8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.guild-stats-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.guild-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.guild-stat-label {
+  color: #9ca3af;
+}
+
+.guild-stat-value {
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.guild-stat-value.volume {
+  color: #38bdf8;
+}
+
+.guild-join-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.guild-join-btn:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.45);
+}
+
+.guild-join-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .guild-podium-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guild-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
