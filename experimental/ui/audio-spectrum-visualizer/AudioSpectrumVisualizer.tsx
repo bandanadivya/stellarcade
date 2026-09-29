@@ -152,6 +152,14 @@ export const AudioSpectrumVisualizer: React.FC<AudioSpectrumVisualizerProps> = (
         ))}
       </div>
 
+      {/*   <span
+        className="audio-spectrum-visualizer__sr-text"
+        role="status"
+        aria-live="polite"
+      >
+        {statusText}
+      </span> */}
+
       <span
         className="audio-spectrum-visualizer__sr-text"
         role="status"
