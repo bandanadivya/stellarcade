@@ -1,0 +1,29 @@
+{
+  "name": "@stellarcade/contract-state-pruner",
+  "version": "0.0.1",
+  "description": "Read-only CLI reporting Soroban contract storage TTL expiration risk and estimated bump cost",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "bin": {
+    "contract-state-pruner": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node cli.ts",
+    "test": "vitest run"
+  },
+  "keywords": ["soroban", "stellar", "storage", "ttl", "rent", "expiration", "cli"],
+  "author": "StellarCade",
+  "license": "MIT",
+  "dependencies": {
+    "@stellar/stellar-sdk": "^14.5.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.0"
+  }
+}
